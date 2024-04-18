@@ -11,8 +11,7 @@ app.use(
         saveUninitialized: false,
         resave: true,
         cookie: {
-            maxAge: 60 * 60 * 1000, // Set the session cookie expiry time appropriately
-            // Ensure that other cookie options such as domain, path, etc., are correctly set if needed
+            maxAge: 60 * 60 * 1000,
         },
     })
 );
