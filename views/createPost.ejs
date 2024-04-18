@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Create New Post</legend>
+        <form action="/createpost" method="POST">
+            <label for="title">Title : </label>
+            <input type="text" id="title" name="title" placeholder="Enter the title of the blog.." required>
+            <br>
+            <br>
+            <label for="content">Content : </label>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="content" id="content" cols="30" rows="10" placeholder="Enter the blog content" required></textarea>
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </fieldset>
+</body>
+</html>

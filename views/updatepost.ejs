@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Post</title>
+</head>
+<body>
+    <h1>Update Post</h1>
+    <form action="/updatepost/<%= postId %>" method="POST">
+        <!-- Input fields for updating post title and content -->
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required value="<%= title %>" width="auto">
+        <br>
+        <br>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required cols="50"
+        rows="10">
+            <%= content %>
+        </textarea>
+        <br>
+        <br>
+        <button type="submit">Update Post</button>
+    </form>
+</body>
+</html>

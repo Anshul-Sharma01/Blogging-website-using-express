@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!! Home Page !!</title>
+    <link rel="stylesheet" href="./home.css"/>
+</head>
+<body>
+    <nav>
+        <h3>Blog-io</h3>
+        <a href="/b1logs">All Blogs</a>
+        <a href="/createpost">Create Post</a>
+        <h3>Blog-io</h3>
+        <a href="/logout">logout</a>
+    </nav>
+    <h1 class="main-head">Welcome to <br>Blog-io</h1>
+    <section class="allblogs">
+        <% if(role !== "admin") { %>
+            <h2>Your blogs</h2>
+            <% blogsData.forEach((ele) => { %>
+                <div class="blog-section">
+                    <h3><%= ele.title %></h3>
+                    <p><%= ele.content %></p>
+                    <br>
+                    <br>
+                    <a href="/updatepost/<%= ele.blogId %>"><button>Update Post</button></a>
+                </div>
+            <% }) %>
+        <% }else { %>
+            <% blogsData.forEach((ele) => { %>
+                <h1 class="author-name">Author :  <%= ele.username %></h1>
+                <% ele.blogs.forEach((el) => { %>
+                    <div class="blog-section">
+                        <h3><%= el.title %></h3>
+                        <p><%= el.content %></p>
+                        <form action="/deletepost/<%= ele.username %>/<%= el.blogId %>" method="POST">
+                            <button type="submit">Delete Post</button>
+                        </form>
+                    </div>
+                <% }) %>
+                <br>
+            <% }) %>
+            <% } %>
+            
+    </section>
+</body>
+</html>
