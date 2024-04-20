@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <fieldset>
+        <h1><%= message %></h1>
+        <form action="/login" method="POST">
+            <label for="uname">Username : </label>
+            <input type="text" name="username" id="uname">
+            <br>
+            <br>
+            <label for="pass">Password : </label>
+            <input type="password" id="pass" name="pass">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    background-color: beige;
+    color:black;
+    font-weight:700;
+    font-size:20px;
+}
+nav a{
+    text-decoration: none;
+    color:black;
+}
+
+nav h3:hover,nav a:hover{
+    cursor: pointer;
+    background-color: bisque;
+    padding:2px 20px;
+    transition: 0.2s ease;
+    color:black;
+}
+.main-head{
+    height:100vh;
+    width:100vw;
+    font-size:100px;
+    text-align:center;
+    margin:0;
+    display:flex;
+    font-family:monospace;
+    justify-content: center;
+    align-items: center;
+    background-color:grey;
+    color:white;
+}
+
+.allblogs{
+    background-color:gainsboro;
+    padding:20px;
+}
+.author-name{
+    font-size:22px;
+    background-color:honeydew;
+    padding:5px;
+    width:auto;
+    display:inline;
+    margin:30px;
+}
+
+.blog-section{
+    background-color:cadetblue;
+    padding:14px;
+    margin:2px;
+    border-radius: 10px;
+}
+
+.blog-section button{
+    background-color:rgb(93, 93, 213);
+    color:white;
+    padding:10px;
+    border:2px solid black;
+    border-radius: 8px;
+}
+.blog-section button:hover{
+    cursor:pointer;
+    background-color:rgb(42, 42, 156);
+    transform: scale(1.1);
+    transition: 1.4ms;
+}
+
+
+.allblogs div h3{
+    font-size:20px;
+}
+
+.allblogs div p{
+    font-size:18px;
+}
